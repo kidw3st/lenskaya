@@ -36,12 +36,12 @@ input, textarea, select { font-family: inherit; font-size: inherit; border: none
 
 /* --- Variables --- */
 :root {
-  --c-bg: #FAF8F2;
-  --c-bg-light: #FAF8F2;
-  --c-bg-card: #F2EFE6;
+  --c-bg: #FCFAF5;
+  --c-bg-light: #FCFAF5;
+  --c-bg-card: #F5F2EA;
   --c-bg-dark: #0B100E;
-  --c-text: #1F211B;
-  --c-text-2: #8A8580;
+  --c-text: #1A1D18;
+  --c-text-2: #7A7570;
   --c-forest: #263D31;
   --c-forest-2: #3E5545;
   --c-bronze: #AE8D69;
@@ -277,7 +277,7 @@ p { font-size: 16px; line-height: 1.55; color: var(--c-text-2); }
 .hero-bg-image {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #050A08 0%, #0B100E 30%, #1a2a20 60%, #050A08 100%);
+  background: linear-gradient(135deg, #030806 0%, #0B100E 30%, #1a2a20 60%, #030806 100%);
 }
 .hero-particles { position: absolute; inset: 0; z-index: 3; overflow: hidden; }
 .hero-particle {
