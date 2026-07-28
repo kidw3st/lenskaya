@@ -1,0 +1,563 @@
+/* ============================================
+   ЖК Ленская — Additional Components
+   Per UX/UI Design Specification
+   ============================================ */
+
+/* --- Genplan Section --- */
+.genplan-section {
+  position: relative;
+  padding: var(--section-padding) 0;
+  background: var(--color-cream);
+  overflow: hidden;
+}
+
+.genplan-visual {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #e8dfd0 0%, #d4c8b4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.genplan-visual-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.genplan-visual svg {
+  width: 70%;
+  height: 70%;
+  opacity: 0.15;
+}
+
+.genplan-point {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.genplan-point-dot {
+  width: 16px;
+  height: 16px;
+  background: var(--color-forest);
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.genplan-point-dot::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 2px solid var(--color-forest);
+  border-radius: 50%;
+  opacity: 0;
+  animation: genplan-pulse 2s ease-in-out infinite;
+}
+
+@keyframes genplan-pulse {
+  0%, 100% { opacity: 0; transform: scale(0.8); }
+  50% { opacity: 0.3; transform: scale(1.2); }
+}
+
+.genplan-point:hover .genplan-point-dot {
+  transform: scale(1.3);
+  background: var(--color-gold);
+}
+
+.genplan-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  pointer-events: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.genplan-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: white;
+}
+
+.genplan-point:hover .genplan-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.genplan-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.genplan-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--color-warm-gray);
+}
+
+.genplan-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* --- Landscaping / Благоустройство --- */
+.landscaping-section {
+  padding: var(--section-padding) 0;
+  background: white;
+}
+
+.landscaping-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.landscaping-card {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 3/4;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.landscaping-card:hover {
+  transform: translateY(-4px);
+}
+
+.landscaping-card-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.landscaping-card:hover .landscaping-card-bg {
+  transform: scale(1.05);
+}
+
+.landscaping-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(15, 42, 29, 0.85) 0%, rgba(15, 42, 29, 0.2) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+}
+
+.landscaping-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(196, 162, 101, 0.2);
+  border: 1px solid rgba(196, 162, 101, 0.3);
+  border-radius: 100px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.landscaping-card h4 {
+  font-size: 1.375rem;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.landscaping-card p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* --- Final CTA Section --- */
+.final-cta {
+  position: relative;
+  padding: clamp(100px, 12vw, 180px) 0;
+  overflow: hidden;
+}
+
+.final-cta-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.final-cta-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(196, 162, 101, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(15, 42, 29, 0.92) 0%, rgba(27, 58, 45, 0.88) 100%);
+  z-index: 2;
+}
+
+.final-cta-bg-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0a1f15 0%, #1a3a2a 30%, #0d2818 60%, #1a2a1f 100%);
+}
+
+.final-cta-content {
+  position: relative;
+  z-index: 10;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.final-cta-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: white;
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.final-cta-content p {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+
+.final-cta-form {
+  max-width: 480px;
+  margin: 0 auto 48px;
+}
+
+.final-cta-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.final-cta-phone {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  transition: color 0.2s;
+}
+
+.final-cta-phone:hover { color: var(--color-gold); }
+
+.final-cta-messengers {
+  display: flex;
+  gap: 12px;
+}
+
+/* --- Mobile Bottom Bar --- */
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  background: white;
+  border-top: 1px solid var(--color-sand);
+  padding: 8px 16px;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+}
+
+.mobile-bottom-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 8px;
+}
+
+.mobile-bottom-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-warm-gray);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+  border-radius: 8px;
+}
+
+.mobile-bottom-btn:hover,
+.mobile-bottom-btn.active {
+  color: var(--color-forest);
+}
+
+.mobile-bottom-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.mobile-bottom-btn-cta {
+  background: var(--color-forest);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.mobile-bottom-btn-cta:hover {
+  background: var(--color-forest-light);
+  color: white;
+}
+
+/* --- Architecture Asymmetric Grid --- */
+.arch-asymmetric {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.arch-asymmetric-reverse {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.arch-image-block {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  min-height: 400px;
+}
+
+.arch-image-block-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arch-image-block-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(15, 42, 29, 0.6) 0%, transparent 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+}
+
+.arch-image-block-overlay h4 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.arch-image-block-overlay p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
+
+.arch-text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background: var(--color-sand-light);
+  border-radius: 20px;
+}
+
+/* --- Apartment Card Sold State --- */
+.apartment-card.sold {
+  opacity: 0.7;
+}
+
+.apartment-card.sold .apartment-card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 29, 31, 0.3);
+}
+
+.apartment-card.sold .apartment-card-body {
+  opacity: 0.8;
+}
+
+/* --- Empty States --- */
+.empty-state {
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.empty-state-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-sand-light);
+  border-radius: 50%;
+  color: var(--color-warm-gray);
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.empty-state p {
+  color: var(--color-warm-gray);
+  margin-bottom: 32px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Quote Block --- */
+.quote-block {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.quote-block-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-style: italic;
+  color: var(--color-forest);
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+
+.quote-block-text::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--color-gold);
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  line-height: 1;
+  opacity: 0.3;
+}
+
+.quote-block-author {
+  font-size: 0.9375rem;
+  color: var(--color-warm-gray);
+}
+
+/* --- Location Environment Cards --- */
+.env-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.env-card {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--color-sand);
+  transition: all 0.3s;
+}
+
+.env-card:hover {
+  border-color: var(--color-gold);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.env-card-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-sand-light);
+  border-radius: 12px;
+  color: var(--color-forest);
+}
+
+.env-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.env-card p {
+  font-size: 0.875rem;
+  color: var(--color-warm-gray);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .arch-asymmetric,
+  .arch-asymmetric-reverse {
+    grid-template-columns: 1fr;
+  }
+  .landscaping-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .env-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-bar {
+    display: block;
+  }
+  body {
+    padding-bottom: 70px;
+  }
+  .landscaping-grid {
+    grid-template-columns: 1fr;
+  }
+  .genplan-legend {
+    gap: 16px;
+  }
+  .final-cta-contacts {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
