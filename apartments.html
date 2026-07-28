@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Квартиры — ЖК Ленская | Каталог квартир бизнес-класса в Перми</title>
+  <meta name="description" content="Каталог квартир ЖК Ленская: студии, 1-, 2-, 3-комнатные квартиры бизнес-класса. Фильтры по площади, этажу, цене. Планировки и цены.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo" style="color: var(--color-text);">
+        <svg class="header-logo-icon" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="4" fill="currentColor" opacity="0.15"/><path d="M8 28V12L18 6L28 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 28V20H22V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 28H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Ленская
+      </a>
+      <nav class="header-nav">
+        <a href="index.html#advantages" style="color: var(--color-text-light);">О проекте</a>
+        <a href="apartments.html" style="color: var(--color-accent);">Квартиры</a>
+        <a href="gallery.html" style="color: var(--color-text-light);">Галерея</a>
+        <a href="location.html" style="color: var(--color-text-light);">Расположение</a>
+        <a href="contacts.html" style="color: var(--color-text-light);">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+73421234567" class="header-phone" style="color: var(--color-text);">+7 (342) 123-45-67</a>
+        <a href="favorites.html" class="header-favorites" style="color: var(--color-text-light);" title="Избранное">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="header-favorites-count">0</span>
+        </a>
+        <button class="header-cta" data-modal="modal-consult" style="background: var(--color-gold); color: white;">Получить консультацию</button>
+        <div class="burger" aria-label="Меню"><span style="background: var(--color-text);"></span><span style="background: var(--color-text);"></span><span style="background: var(--color-text);"></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <nav>
+      <a href="index.html#advantages">О проекте</a>
+      <a href="apartments.html">Квартиры</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="location.html">Расположение</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="favorites.html">Избранное</a>
+    </nav>
+    <div class="mobile-menu-phone"><a href="tel:+73421234567">+7 (342) 123-45-67</a></div>
+    <div style="margin-top: 24px;"><button class="btn btn-gold" data-modal="modal-consult">Получить консультацию</button></div>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Квартиры</h1>
+      <p>Выберите идеальную планировку из 709 квартир бизнес-класса на первой линии Камы</p>
+    </div>
+  </div>
+
+  <!-- Catalog -->
+  <section class="section">
+    <div class="container">
+      <!-- Filters -->
+      <div class="catalog-filters fade-in">
+        <div class="filter-group">
+          <label class="filter-label">Комнатность</label>
+          <select class="filter-select" data-filter="rooms">
+            <option value="">Все</option>
+            <option value="1">Студия</option>
+            <option value="2">1-комнатная</option>
+            <option value="3">2-комнатная</option>
+            <option value="4">3-комнатная</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Площадь, м²</label>
+          <div style="display: flex; gap: 8px;">
+            <input type="number" class="filter-input" data-filter="area-min" placeholder="от" min="0">
+            <input type="number" class="filter-input" data-filter="area-max" placeholder="до" min="0">
+          </div>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Этаж</label>
+          <div style="display: flex; gap: 8px;">
+            <input type="number" class="filter-input" data-filter="floor-min" placeholder="от" min="1" max="25">
+            <input type="number" class="filter-input" data-filter="floor-max" placeholder="до" min="1" max="25">
+          </div>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Стоимость, млн ₽</label>
+          <div style="display: flex; gap: 8px;">
+            <input type="number" class="filter-input" data-filter="price-min" placeholder="от" min="0" step="0.5">
+            <input type="number" class="filter-input" data-filter="price-max" placeholder="до" min="0" step="0.5">
+          </div>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Корпус</label>
+          <select class="filter-select" data-filter="building">
+            <option value="">Все</option>
+            <option value="1">Корпус 1</option>
+            <option value="2">Корпус 2</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Статус</label>
+          <select class="filter-select" data-filter="status">
+            <option value="">Активные</option>
+            <option value="free">Свободна</option>
+            <option value="reserved">Бронь</option>
+            <option value="sold">Продано</option>
+          </select>
+        </div>
+        <div class="filter-actions">
+          <button class="btn btn-ghost btn-sm filter-reset">Сбросить</button>
+        </div>
+      </div>
+
+      <p class="filter-count"></p>
+
+      <!-- Grid -->
+      <div class="apartments-grid">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="load-more-wrap">
+        <button class="btn btn-outline load-more-btn" style="display: none;">Показать ещё</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="contact-section section">
+    <div class="container" style="text-align: center; max-width: 640px;">
+      <h3 style="color: white; margin-bottom: 16px;">Не нашли подходящую квартиру?</h3>
+      <p style="color: rgba(255,255,255,0.7); margin-bottom: 32px;">Оставьте заявку на подбор — мы подберём оптимальный вариант с учётом ваших пожеланий и бюджета.</p>
+      <form class="form" data-form="apartment_search" style="max-width: 480px; margin: 0 auto;">
+        <div class="form-group">
+          <input type="text" name="name" class="form-input" placeholder="Ваше имя" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" name="consent" id="search-consent" required>
+          <label for="search-consent">Я даю согласие на <a href="legal.html">обработку персональных данных</a></label>
+        </div>
+        <button type="submit" class="btn btn-gold btn-lg" style="width: 100%;">Подобрать квартиру</button>
+      </form>
+      <div class="form-success">
+        <h4>Заявка отправлена!</h4>
+        <p>Мы подберём варианты и свяжемся с вами.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="28" height="28" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="4" fill="currentColor" opacity="0.15"/><path d="M8 28V12L18 6L28 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 28V20H22V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 28H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Ленская
+          </div>
+          <p>Премиальный жилой комплекс бизнес-класса на первой линии правого берега Камы.</p>
+        </div>
+        <div>
+          <h5>Навигация</h5>
+          <div class="footer-links">
+            <a href="index.html#advantages">О проекте</a>
+            <a href="apartments.html">Квартиры</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="location.html">Расположение</a>
+            <a href="contacts.html">Контакты</a>
+          </div>
+        </div>
+        <div>
+          <h5>Квартиры</h5>
+          <div class="footer-links">
+            <a href="apartments.html?rooms=1">Студии</a>
+            <a href="apartments.html?rooms=2">1-комнатные</a>
+            <a href="apartments.html?rooms=3">2-комнатные</a>
+            <a href="apartments.html?rooms=4">3-комнатные</a>
+            <a href="favorites.html">Избранное</a>
+          </div>
+        </div>
+        <div>
+          <h5>Контакты</h5>
+          <div class="footer-links">
+            <a href="tel:+73421234567">+7 (342) 123-45-67</a>
+            <a href="mailto:info@lenskaya.ru">info@lenskaya.ru</a>
+            <a href="contacts.html">г. Пермь, ул. Ленская, 1</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ЖК Ленская. Все права защищены.</p>
+        <div class="footer-legal">
+          <a href="legal.html">Политика конфиденциальности</a>
+          <a href="legal.html#consent">Согласие на обработку данных</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Consultation Modal -->
+  <div class="modal-overlay" id="modal-consult">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Получить консультацию</h3>
+        <button class="modal-close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+      <div class="modal-body">
+        <form class="form" data-form="modal_consult">
+          <div class="form-group">
+            <label class="form-label">Имя *</label>
+            <input type="text" name="name" class="form-input" placeholder="Ваше имя" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Телефон *</label>
+            <input type="tel" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" name="consent" id="mc-consent" required>
+            <label for="mc-consent">Я даю согласие на <a href="legal.html">обработку персональных данных</a></label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Отправить</button>
+        </form>
+        <div class="form-success"><h4>Заявка отправлена!</h4><p>Перезвоним в течение 15 минут.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Apply URL params to filters
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('rooms')) {
+        const sel = document.querySelector('[data-filter="rooms"]');
+        if (sel) sel.value = params.get('rooms');
+      }
+      applyFilters();
+    });
+  </script>
+</body>
+</html>

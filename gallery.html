@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея — ЖК Ленская | Визуализации жилого комплекса</title>
+  <meta name="description" content="Галерея визуализаций ЖК Ленская: архитектура, благоустройство, виды, интерьеры.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="gallery-page">
+
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo" style="color: var(--color-text);">
+        <svg class="header-logo-icon" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="4" fill="currentColor" opacity="0.15"/><path d="M8 28V12L18 6L28 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 28V20H22V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 28H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Ленская
+      </a>
+      <nav class="header-nav">
+        <a href="index.html#advantages" style="color: var(--color-text-light);">О проекте</a>
+        <a href="apartments.html" style="color: var(--color-text-light);">Квартиры</a>
+        <a href="gallery.html" style="color: var(--color-accent);">Галерея</a>
+        <a href="location.html" style="color: var(--color-text-light);">Расположение</a>
+        <a href="contacts.html" style="color: var(--color-text-light);">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+73421234567" class="header-phone" style="color: var(--color-text);">+7 (342) 123-45-67</a>
+        <a href="favorites.html" class="header-favorites" style="color: var(--color-text-light);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="header-favorites-count">0</span>
+        </a>
+        <button class="header-cta" data-modal="modal-consult" style="background: var(--color-gold); color: white;">Получить консультацию</button>
+        <div class="burger" aria-label="Меню"><span style="background: var(--color-text);"></span><span style="background: var(--color-text);"></span><span style="background: var(--color-text);"></span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <nav>
+      <a href="index.html#advantages">О проекте</a>
+      <a href="apartments.html">Квартиры</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="location.html">Расположение</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="mobile-menu-phone"><a href="tel:+73421234567">+7 (342) 123-45-67</a></div>
+  </div>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Галерея</h1>
+      <p>Визуализации архитектуры, благоустройства и видов жилого комплекса</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <!-- Filter tabs -->
+      <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: var(--space-2xl); flex-wrap: wrap;">
+        <button class="btn btn-sm btn-primary gallery-tab active" data-tab="all">Все</button>
+        <button class="btn btn-sm btn-ghost gallery-tab" data-tab="architecture">Архитектура</button>
+        <button class="btn btn-sm btn-ghost gallery-tab" data-tab="interior">Интерьеры</button>
+        <button class="btn btn-sm btn-ghost gallery-tab" data-tab="territory">Территория</button>
+        <button class="btn btn-sm btn-ghost gallery-tab" data-tab="views">Виды</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Architecture -->
+        <div class="gallery-item large fade-in" data-category="architecture" data-caption="Фасад жилого комплекса — террасная архитектура">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2d5a3d, #1a3a2a); color: white;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px; opacity: 0.5;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span>Фасад комплекса</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="architecture" data-caption="Вид со стороны набережной">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #3a5a4f, #2a4a3f); color: white;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px; opacity: 0.5;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span>Вид с набережной</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="architecture" data-caption="Силуэт комплекса на закате">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4a5a4f, #3a4a3f); color: white;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px; opacity: 0.5;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span>Силуэт на закате</span>
+          </div>
+        </div>
+        <!-- Territory -->
+        <div class="gallery-item fade-in" data-category="territory" data-caption="Дворовая территория с озеленением">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #3a6a4f, #2a5a3f); color: white;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px; opacity: 0.5;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span>Дворовая территория</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="territory" data-caption="Детская площадка">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4a7a5f, #3a6a4f); color: white;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px; opacity: 0.5;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span>Детская площадка</span>
+          </div>
+        </div>
+        <div class="gallery-item large fade-in" data-category="territory" data-caption="Зелёный коридор к набережной">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2a5a3d, #1a4a2d); color: white;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px; opacity: 0.5;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span>Зелёный коридор</span>
+          </div>
+        </div>
+        <!-- Interior -->
+        <div class="gallery-item fade-in" data-category="interior" data-caption="Лобби и зон ресепшн">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #5a5a4f, #4a4a3f); color: white;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px; opacity: 0.5;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span>Лобби</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="interior" data-caption="Панорамное остекление квартир">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #6a6a5f, #5a5a4f); color: white;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px; opacity: 0.5;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span>Панорамное остекление</span>
+          </div>
+        </div>
+        <!-- Views -->
+        <div class="gallery-item large fade-in" data-category="views" data-caption="Панорамный вид на Каму с верхних этажей">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1a3a5a, #0d2a4a); color: white;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px; opacity: 0.5;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span>Панорамный вид на Каму</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="views" data-caption="Вид на Закамский Бор">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2a4a3d, #1a3a2d); color: white;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px; opacity: 0.5;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span>Вид на Закамский Бор</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="views" data-caption="Вечерняя панорама">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1a2a3d, #0d1a2d); color: white;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px; opacity: 0.5;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span>Вечерняя панорама</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section section">
+    <div class="container" style="text-align: center; max-width: 640px;">
+      <h3 style="color: white; margin-bottom: 16px;">Хотите увидеть больше?</h3>
+      <p style="color: rgba(255,255,255,0.7); margin-bottom: 32px;">Получите полную презентацию проекта с визуализациями и планировками</p>
+      <button class="btn btn-gold btn-lg" data-modal="modal-presentation">Получить презентацию</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 ЖК Ленская. Все права защищены.</p>
+        <div class="footer-legal">
+          <a href="legal.html">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="modal-consult">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Получить консультацию</h3>
+        <button class="modal-close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+      <div class="modal-body">
+        <form class="form" data-form="modal_consult">
+          <div class="form-group">
+            <label class="form-label">Имя *</label>
+            <input type="text" name="name" class="form-input" placeholder="Ваше имя" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Телефон *</label>
+            <input type="tel" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" name="consent" id="gc-consent" required>
+            <label for="gc-consent">Я даю согласие на <a href="legal.html">обработку персональных данных</a></label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Отправить</button>
+        </form>
+        <div class="form-success"><h4>Заявка отправлена!</h4></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-presentation">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Получить презентацию</h3>
+        <button class="modal-close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+      <div class="modal-body">
+        <form class="form" data-form="presentation">
+          <div class="form-group">
+            <label class="form-label">Имя *</label>
+            <input type="text" name="name" class="form-input" placeholder="Ваше имя" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Телефон или Email *</label>
+            <input type="text" name="phone" class="form-input" placeholder="Телефон или email" required>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" name="consent" id="gp-consent" required>
+            <label for="gp-consent">Я даю согласие на <a href="legal.html">обработку персональных данных</a></label>
+          </div>
+          <button type="submit" class="btn btn-gold btn-lg" style="width: 100%;">Скачать презентацию</button>
+        </form>
+        <div class="form-success"><h4>Спасибо!</h4><p>Презентация отправлена.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Gallery tabs
+    document.querySelectorAll('.gallery-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.gallery-tab').forEach(t => {
+          t.classList.remove('active', 'btn-primary');
+          t.classList.add('btn-ghost');
+        });
+        tab.classList.add('active', 'btn-primary');
+        tab.classList.remove('btn-ghost');
+        
+        const category = tab.dataset.tab;
+        document.querySelectorAll('.gallery-item').forEach(item => {
+          if (category === 'all' || item.dataset.category === category) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
