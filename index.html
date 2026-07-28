@@ -5,18 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ЖК Ленская — Премиальный жилой комплекс бизнес-класса в Перми</title>
   <meta name="description" content="ЖК Ленская — жилой комплекс бизнес-класса на первой линии правого берега Камы. Панорамные виды, террасная архитектура, приватные дворы. Квартиры от 38 до 136 м².">
-  <meta name="keywords" content="ЖК Ленская, квартиры Пермь, бизнес-класс, правый берег Камы, новостройки Пермь">
   <meta property="og:title" content="ЖК Ленская — Премиальный жилой комплекс бизнес-класса">
-  <meta property="og:description" content="Первая линия правого берега Камы. Панорамные виды, террасная архитектура, приватные дворы.">
+  <meta property="og:description" content="Первая линия правого берега Камы. Террасная архитектура, панорамные виды.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kidw3st.github.io/lenskaya/">
-  <meta property="og:image" content="https://kidw3st.github.io/lenskaya/images/og-image.jpg">
   <link rel="canonical" href="https://kidw3st.github.io/lenskaya/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <!-- Schema.org markup -->
+  <link rel="stylesheet" href="css/premium.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,57 +22,35 @@
     "name": "ЖК Ленская",
     "description": "Премиальный жилой комплекс бизнес-класса на первой линии правого берега Камы",
     "url": "https://kidw3st.github.io/lenskaya/",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Пермь",
-      "addressRegion": "Пермский край",
-      "streetAddress": "ул. Ленская"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 58.0105,
-      "longitude": 56.2502
-    }
+    "address": { "@type": "PostalAddress", "addressLocality": "Пермь", "streetAddress": "ул. Ленская" },
+    "geo": { "@type": "GeoCoordinates", "latitude": 58.0105, "longitude": 56.2502 }
   }
   </script>
 </head>
-<body>
+<body class="premium-body">
 
   <!-- Header -->
   <header class="header" id="header">
     <div class="header-inner">
       <a href="index.html" class="header-logo">
-        <svg class="header-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="36" height="36" rx="4" fill="currentColor" opacity="0.15"/>
-          <path d="M8 28V12L18 6L28 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M14 28V20H22V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M8 28H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+        <svg class="header-logo-icon" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="4" fill="currentColor" opacity="0.15"/><path d="M8 28V12L18 6L28 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 28V20H22V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 28H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         Ленская
       </a>
-      
       <nav class="header-nav">
-        <a href="index.html#advantages">О проекте</a>
+        <a href="#about">О проекте</a>
         <a href="apartments.html">Квартиры</a>
         <a href="gallery.html">Галерея</a>
-        <a href="location.html">Расположение</a>
+        <a href="#location">Расположение</a>
         <a href="contacts.html">Контакты</a>
       </nav>
-      
       <div class="header-actions">
         <a href="tel:+73421234567" class="header-phone">+7 (342) 123-45-67</a>
         <a href="favorites.html" class="header-favorites" title="Избранное">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-          </svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           <span class="header-favorites-count">0</span>
         </a>
         <button class="header-cta" data-modal="modal-consult">Получить консультацию</button>
-        <div class="burger" aria-label="Меню">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <div class="burger" aria-label="Меню"><span></span><span></span><span></span></div>
       </div>
     </div>
   </header>
@@ -82,218 +58,385 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu">
     <nav>
-      <a href="index.html#advantages">О проекте</a>
+      <a href="#about">О проекте</a>
       <a href="apartments.html">Квартиры</a>
       <a href="gallery.html">Галерея</a>
-      <a href="location.html">Расположение</a>
+      <a href="#location">Расположение</a>
       <a href="contacts.html">Контакты</a>
       <a href="favorites.html">Избранное</a>
     </nav>
-    <div class="mobile-menu-phone">
-      <a href="tel:+73421234567">+7 (342) 123-45-67</a>
+    <div class="mobile-menu-phone"><a href="tel:+73421234567">+7 (342) 123-45-67</a></div>
+    <div style="margin-top: 24px;"><button class="btn btn-gold" data-modal="modal-consult">Получить консультацию</button></div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero-premium">
+    <div class="hero-premium-bg"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-premium-content">
+      <div class="hero-premium-top">
+        <div class="hero-premium-badge">
+          <span class="hero-premium-badge-dot"></span>
+          Предпродажа · Бизнес-класс
+        </div>
+      </div>
+      <h1 class="hero-premium-title">
+        Жилой комплекс<br>«Ленская»
+        <span>на берегу Камы</span>
+      </h1>
+      <p class="hero-premium-subtitle">Террасная архитектура, панорамные виды на реку и Закамский Бор, приватные дворы без транзитного трафика — пространство для осознанной жизни.</p>
+      <div class="hero-premium-ctas">
+        <a href="apartments.html" class="btn-premium btn-premium-primary">Выбрать квартиру</a>
+        <button class="btn-premium btn-premium-outline" data-modal="modal-presentation">Получить презентацию</button>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-number">709</div>
+          <div class="hero-stat-label">квартир</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">25</div>
+          <div class="hero-stat-label">этажей</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">2</div>
+          <div class="hero-stat-label">корпуса</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">1<sup style="font-size:0.4em">я</sup></div>
+          <div class="hero-stat-label">линия Камы</div>
+        </div>
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar-label">
+          <span>Стадия проекта</span>
+          <span>Концепция · 15%</span>
+        </div>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill"></div>
+        </div>
+      </div>
     </div>
-    <div style="margin-top: 24px;">
-      <button class="btn btn-gold" data-modal="modal-consult">Получить консультацию</button>
+    <div class="scroll-indicator">
+      <span class="scroll-indicator-text">Листайте</span>
+      <div class="scroll-indicator-line"></div>
+    </div>
+  </section>
+
+  <!-- Quick Search -->
+  <div class="hero-search">
+    <div class="hero-search-inner">
+      <div class="hero-search-group">
+        <label class="hero-search-label">Комнатность</label>
+        <select class="hero-search-select" id="hero-rooms">
+          <option value="">Любая</option>
+          <option value="1">Студия</option>
+          <option value="2">1-комнатная</option>
+          <option value="3">2-комнатная</option>
+          <option value="4">3-комнатная</option>
+        </select>
+      </div>
+      <div class="hero-search-group">
+        <label class="hero-search-label">Площадь, м²</label>
+        <select class="hero-search-select" id="hero-area">
+          <option value="">Любая</option>
+          <option value="30-50">30–50</option>
+          <option value="50-70">50–70</option>
+          <option value="70-100">70–100</option>
+          <option value="100+">от 100</option>
+        </select>
+      </div>
+      <div class="hero-search-group">
+        <label class="hero-search-label">Стоимость</label>
+        <select class="hero-search-select" id="hero-price">
+          <option value="">Любая</option>
+          <option value="5-7">5–7 млн</option>
+          <option value="7-10">7–10 млн</option>
+          <option value="10-15">10–15 млн</option>
+          <option value="15+">от 15 млн</option>
+        </select>
+      </div>
+      <button class="hero-search-btn" onclick="applyHeroSearch()">Подобрать</button>
     </div>
   </div>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <div class="hero-bg-gradient"></div>
-      <div class="hero-bg-image" style="background: linear-gradient(135deg, #1a2a1f 0%, #2d3d2f 30%, #1a3a2a 60%, #0d1f15 100%); width: 100%; height: 100%;"></div>
-    </div>
-    <div class="hero-particles"></div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-        Бизнес-класс · Пермь
-      </div>
-      <h1>Жилой комплекс<br>«Ленская»</h1>
-      <p class="hero-subtitle">Первая линия правого берега Камы. Террасная архитектура, панорамные виды и приватные дворы — для тех, кто выбирает осознанную жизнь у воды.</p>
-      <div class="hero-location">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        г. Пермь, ул. Ленская, правый берег р. Камы
-      </div>
-      <div class="hero-ctas">
-        <a href="apartments.html" class="btn btn-primary btn-lg">Выбрать квартиру</a>
-        <button class="btn btn-secondary btn-lg" data-modal="modal-presentation">Получить презентацию</button>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Листайте</span>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-    </div>
-  </section>
-
-  <!-- Manifest Section -->
-  <section class="manifest section" id="manifest">
+  <!-- ========== MANIFEST ========== -->
+  <section class="section" style="padding-top: 160px;" id="about">
     <div class="container">
-      <div class="manifest-content fade-in">
-        <h2>Место, где природа и архитектура становятся образом жизни</h2>
-        <p>Ленская — это не просто жилой комплекс, а философия осознанного выбора. Зелёные коридоры между Закамским Бором и набережной, ступенчатые террасы для раскрытия видов и приватные дворы без транзитного потока создают пространство для спокойной, наполненной жизни.</p>
-      </div>
-      <div class="manifest-stats fade-in">
-        <div>
-          <div class="manifest-stat-number">709</div>
-          <div class="manifest-stat-label">квартир</div>
+      <div class="two-col">
+        <div class="animate-on-scroll">
+          <div class="gold-divider" style="margin-bottom: 24px;"></div>
+          <p class="premium-quote">
+            Место, где природа и архитектура становятся образом жизни
+          </p>
         </div>
-        <div>
-          <div class="manifest-stat-number">25</div>
-          <div class="manifest-stat-label">этажей</div>
-        </div>
-        <div>
-          <div class="manifest-stat-number">2</div>
-          <div class="manifest-stat-label">корпуса</div>
-        </div>
-        <div>
-          <div class="manifest-stat-number">1<sup style="font-size:0.5em">я</sup></div>
-          <div class="manifest-stat-label">линия Камы</div>
+        <div class="animate-on-scroll delay-2">
+          <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-warm-gray); margin-bottom: 24px;">
+            Ленская — это не просто жилой комплекс, а философия осознанного выбора. Зелёные коридоры между Закамским Бором и набережной, ступенчатые террасы для раскрытия видов и приватные дворы без транзитного потока создают пространство для спокойной, наполненной жизни.
+          </p>
+          <p style="font-size: 1rem; color: var(--color-warm-gray);">
+            Первая линия правого берега Камы — привилегированная локация, где утренние закаты отражаются в воде, а лесной воздух наполняет каждый день.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Advantages Section -->
-  <section class="section" id="advantages">
+  <!-- ========== ADVANTAGES (Numbered) ========== -->
+  <section class="section section-numbered" style="background: white;">
     <div class="container">
-      <div class="section-header fade-in">
-        <h2>Преимущества</h2>
-        <div class="section-divider"></div>
-        <p>Каждая деталь продумана для создания пространства, в котором хочется жить</p>
+      <div class="animate-on-scroll" style="text-align: center; margin-bottom: 64px;">
+        <div class="gold-divider" style="margin: 0 auto 24px;"></div>
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px;">Преимущества</h2>
+        <p style="font-size: 1.125rem; color: var(--color-warm-gray); max-width: 600px; margin: 0 auto;">Каждая деталь продумана для создания пространства, в котором хочется жить</p>
       </div>
-      <div class="advantages-grid">
-        <div class="advantage-card fade-in">
-          <div class="advantage-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="advantages-horizontal">
+        <div class="advantage-premium animate-on-scroll">
+          <div class="advantage-premium-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
           <h4>Первая линия Камы</h4>
-          <p>Панорамные виды на реку и Закамский Бор из каждой квартиры. Набережная в шаговой доступности.</p>
+          <p>Панорамные виды на реку и Закамский Бор. Набережная в шаговой доступности.</p>
         </div>
-        <div class="advantage-card fade-in">
-          <div class="advantage-icon">
+        <div class="advantage-premium animate-on-scroll delay-1">
+          <div class="advantage-premium-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
           </div>
           <h4>Террасная архитектура</h4>
-          <p>Ступенчатая конструкция зданий обеспечивает максимальную инсоляцию и раскрывает видовые характеристики.</p>
+          <p>Ступенчатая конструкция для максимальной инсоляции и раскрытия видов.</p>
         </div>
-        <div class="advantage-card fade-in">
-          <div class="advantage-icon">
+        <div class="advantage-premium animate-on-scroll delay-2">
+          <div class="advantage-premium-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
           </div>
           <h4>Приватные дворы</h4>
-          <p>Периметральная застройка создаёт закрытые дворы без транзитного трафика. Безопасное пространство для детей и отдыха.</p>
+          <p>Периметральная застройка создаёт закрытые дворы без транзитного трафика.</p>
         </div>
-        <div class="advantage-card fade-in">
-          <div class="advantage-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        <div class="advantage-premium animate-on-scroll delay-3">
+          <div class="advantage-premium-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
           </div>
           <h4>Зелёные коридоры</h4>
-          <p>Связь между лесным массивом Закамский Бор и набережной через озеленённые прогулочные маршруты.</p>
-        </div>
-        <div class="advantage-card fade-in">
-          <div class="advantage-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-          </div>
-          <h4>Инфраструктура</h4>
-          <p>Кафе, фитнес, детские сады, аптеки на первых этажах. Всё необходимое — в шаговой доступности.</p>
-        </div>
-        <div class="advantage-card fade-in">
-          <div class="advantage-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h4>Бизнес-класс</h4>
-          <p>Высокие стандарты строительства, премиальные материалы и продуманные планировки для комфортной жизни.</p>
+          <p>Связь между Закамским Бором и набережной через озеленённые маршруты.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Architecture Section -->
-  <section class="section" id="architecture" style="background: var(--color-bg-alt);">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>Архитектура</h2>
-        <div class="section-divider"></div>
-        <p>Современная террасная архитектура, гармонично вписанная в природный ландшафт правого берега</p>
+  <!-- ========== ARCHITECTURE FULLWIDTH ========== -->
+  <section class="fullwidth-showcase">
+    <div class="fullwidth-showcase-bg" style="background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3d 50%, #0d2818 100%);"></div>
+    <div class="fullwidth-showcase-overlay">
+      <div class="container">
+        <div class="animate-on-scroll">
+          <div class="gold-divider" style="margin-bottom: 24px;"></div>
+          <h2 class="fullwidth-showcase-title">Архитектура</h2>
+          <p class="fullwidth-showcase-text">Современная террасная архитектура, гармонично вписанная в природный ландшафт правого берега. Камень, стекло и металл в единой композиции.</p>
+        </div>
       </div>
-      <div class="arch-showcase">
-        <div class="arch-card large fade-in-left">
-          <div class="arch-card-bg" style="background: linear-gradient(135deg, #2d5a3d 0%, #1a3a2a 50%, #0d2818 100%); width: 100%; height: 100%;"></div>
-          <div class="arch-card-overlay">
-            <h4>Террасные силуэты</h4>
-            <p>Ступенчатая форма зданий раскрывает панорамные виды на Каму с каждого этажа</p>
+    </div>
+  </section>
+
+  <!-- ========== ARCHITECTURE DETAILS ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="animate-on-scroll">
+          <div class="numbered-block">
+            <h3 style="font-size: 1.75rem; margin-bottom: 24px;">Террасные силуэты</h3>
+            <p style="color: var(--color-warm-gray); margin-bottom: 16px;">Ступенчатая форма зданий раскрывает панорамные виды на Каму с каждого этажа. Каждая квартира получает максимум естественного света и уникальную перспективу.</p>
+            <p style="color: var(--color-warm-gray);">Фасады выполнены из натуральных материалов — камень, стекло и металл создают элегантный образ, который подчёркивает статус комплекса.</p>
           </div>
         </div>
-        <div class="arch-card fade-in-right">
-          <div class="arch-card-bg" style="background: linear-gradient(135deg, #3a4a3f 0%, #2a3a2f 100%); width: 100%; height: 100%;"></div>
-          <div class="arch-card-overlay">
-            <h4>Природные материалы</h4>
-            <p>Камень, стекло и металл в единой гармонии</p>
-          </div>
-        </div>
-        <div class="arch-card fade-in-right">
-          <div class="arch-card-bg" style="background: linear-gradient(135deg, #4a5a4f 0%, #3a4a3f 100%); width: 100%; height: 100%;"></div>
-          <div class="arch-card-overlay">
-            <h4>Свет и пространство</h4>
-            <p>Панорамное остекление для максимальной инсоляции</p>
+        <div class="animate-on-scroll delay-2">
+          <div style="background: linear-gradient(135deg, #2d5a3d, #1a3a2a); border-radius: 20px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;">
+            <svg viewBox="0 0 120 100" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5" style="width: 80%; height: 80%;">
+              <rect x="10" y="20" width="40" height="70" rx="2"/>
+              <rect x="30" y="10" width="40" height="80" rx="2"/>
+              <rect x="50" y="30" width="40" height="60" rx="2"/>
+              <rect x="70" y="15" width="40" height="75" rx="2"/>
+            </svg>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Location Preview -->
-  <section class="section" id="location">
+  <!-- ========== LOCATION (Numbered) ========== -->
+  <section class="section section-numbered" id="location" style="background: white;">
     <div class="container">
-      <div class="section-header fade-in">
-        <h2>Расположение</h2>
-        <div class="section-divider"></div>
-        <p>Правый берег Камы — привилегированная локация с уникальным сочетанием природы и городской инфраструктуры</p>
-      </div>
-      <div class="location-grid">
-        <div class="location-map fade-in-left">
-          <div class="map-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>г. Пермь, ул. Ленская</span>
-            <span style="font-size: 0.75rem; opacity: 0.7;">Интерактивная карта</span>
+      <div class="two-col">
+        <div class="animate-on-scroll">
+          <div class="numbered-block">
+            <h3 style="font-size: 1.75rem; margin-bottom: 24px;">Расположение</h3>
+            <p style="color: var(--color-warm-gray); margin-bottom: 32px;">Правый берег Камы — привилегированная локация с уникальным сочетанием природы и городской инфраструктуры.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+            <div style="padding: 24px; background: var(--color-sand-light); border-radius: 12px;">
+              <div style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--color-gold); margin-bottom: 4px;">5 мин</div>
+              <div style="font-size: 0.8125rem; color: var(--color-warm-gray);">до набережной</div>
+            </div>
+            <div style="padding: 24px; background: var(--color-sand-light); border-radius: 12px;">
+              <div style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--color-gold); margin-bottom: 4px;">10 мин</div>
+              <div style="font-size: 0.8125rem; color: var(--color-warm-gray);">до центра города</div>
+            </div>
+            <div style="padding: 24px; background: var(--color-sand-light); border-radius: 12px;">
+              <div style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--color-gold); margin-bottom: 4px;">7 мин</div>
+              <div style="font-size: 0.8125rem; color: var(--color-warm-gray);">до Закамского Бора</div>
+            </div>
+            <div style="padding: 24px; background: var(--color-sand-light); border-radius: 12px;">
+              <div style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--color-gold); margin-bottom: 4px;">15 мин</div>
+              <div style="font-size: 0.8125rem; color: var(--color-warm-gray);">до ТЦ и школ</div>
+            </div>
           </div>
         </div>
-        <div class="location-features fade-in-right">
-          <div class="location-feature">
-            <div class="location-feature-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            </div>
-            <div>
-              <h4>Набережная Камы</h4>
-              <p>5 минут пешком до набережной с прогулочными маршрутами и видовыми площадками</p>
-            </div>
+        <div class="animate-on-scroll delay-2">
+          <div style="background: linear-gradient(135deg, var(--color-forest), var(--color-forest-dark)); border-radius: 20px; aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; color: white;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 48px; height: 48px; opacity: 0.5;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span style="font-size: 1.125rem; font-weight: 600;">г. Пермь, ул. Ленская</span>
+            <span style="font-size: 0.875rem; opacity: 0.5;">Интерактивная карта</span>
           </div>
-          <div class="location-feature">
-            <div class="location-feature-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div>
-              <h4>Закамский Бор</h4>
-              <p>Лесной массив в непосредственной близости — чистый воздух и зелёные зоны для отдыха</p>
-            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INFRASTRUCTURE CAROUSEL ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center; margin-bottom: 64px;">
+        <div class="gold-divider" style="margin: 0 auto 24px;"></div>
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px;">Инфраструктура</h2>
+        <p style="font-size: 1.125rem; color: var(--color-warm-gray); max-width: 600px; margin: 0 auto;">Всё необходимое для комфортной жизни в шаговой доступности</p>
+      </div>
+      <div class="horizontal-scroll">
+        <div class="infra-card horizontal-scroll-item">
+          <div class="infra-card-image" style="background: linear-gradient(135deg, #3a5a4f, #2a4a3f);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
           </div>
-          <div class="location-feature">
-            <div class="location-feature-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-            </div>
-            <div>
-              <h4>10 минут до центра</h4>
-              <p>Быстрый доступ к центру города, бизнес-кварталам и культурным объектам</p>
-            </div>
+          <div class="infra-card-body">
+            <h4>Кафе и рестораны</h4>
+            <p>Уютные заведения на первых этажах для встреч и отдыха</p>
           </div>
-          <div class="location-feature">
-            <div class="location-feature-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+        </div>
+        <div class="infra-card horizontal-scroll-item">
+          <div class="infra-card-image" style="background: linear-gradient(135deg, #4a5a4f, #3a4a3f);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div class="infra-card-body">
+            <h4>Фитнес и спорт</h4>
+            <p>Современные спортивные зоны и фитнес-студии</p>
+          </div>
+        </div>
+        <div class="infra-card horizontal-scroll-item">
+          <div class="infra-card-image" style="background: linear-gradient(135deg, #5a6a5f, #4a5a4f);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <div class="infra-card-body">
+            <h4>Детские сады</h4>
+            <p>Образовательные пространства для самых маленьких</p>
+          </div>
+        </div>
+        <div class="infra-card horizontal-scroll-item">
+          <div class="infra-card-image" style="background: linear-gradient(135deg, #2a3a2f, #1a2a1f);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="infra-card-body">
+            <h4>Аптеки</h4>
+            <p>Аптечные пункты и медицинские услуги</p>
+          </div>
+        </div>
+        <div class="infra-card horizontal-scroll-item">
+          <div class="infra-card-image" style="background: linear-gradient(135deg, #3a4a3f, #2a3a2f);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div class="infra-card-body">
+            <h4>Магазины</h4>
+            <p>Продуктовые и розничные магазины у дома</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== APARTMENTS PREVIEW ========== -->
+  <section class="section section-numbered" style="background: white;">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center; margin-bottom: 64px;">
+        <div class="gold-divider" style="margin: 0 auto 24px;"></div>
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px;">Квартиры</h2>
+        <p style="font-size: 1.125rem; color: var(--color-warm-gray); max-width: 600px; margin: 0 auto;">Выберите идеальную планировку из 709 квартир бизнес-класса</p>
+      </div>
+      <div class="apartments-grid" id="home-apartments-grid"></div>
+      <div class="load-more-wrap animate-on-scroll" style="margin-top: 48px;">
+        <a href="apartments.html" class="btn-premium btn-premium-primary">Смотреть все квартиры</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LOBBY SHOWCASE ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="animate-on-scroll">
+          <div class="numbered-block">
+            <h3 style="font-size: 1.75rem; margin-bottom: 24px;">Лобби и общественные пространства</h3>
+            <p style="color: var(--color-warm-gray); margin-bottom: 24px;">Входные группы выполнены в едином дизайне с использованием натуральных материалов. Ресепшен, зона ожидания и консьерж-сервис создают атмосферу гостиничного уровня.</p>
+            <ul style="list-style: none; padding: 0; margin: 0 0 32px;">
+              <li style="display: flex; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--color-sand); color: var(--color-charcoal);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                Скоростные лифты с доступом в паркинг
+              </li>
+              <li style="display: flex; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--color-sand); color: var(--color-charcoal);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                Камера хранения и кладовые
+              </li>
+              <li style="display: flex; gap: 12px; align-items: center; padding: 12px 0; color: var(--color-charcoal);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                Велопарковка и колясочная
+              </li>
+            </ul>
+            <a href="gallery.html" class="btn-premium btn-premium-primary">Смотреть галерею</a>
+          </div>
+        </div>
+        <div class="animate-on-scroll delay-2">
+          <div class="lobby-showcase">
+            <div class="lobby-slider" id="lobby-slider">
+              <div class="lobby-slide">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #3a4a3f, #2a3a2f); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width: 64px; height: 64px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+                </div>
+                <div class="lobby-slide-caption">
+                  <h4>Зона ресепшен</h4>
+                  <p>Консьерж-сервис и зона ожидания</p>
+                </div>
+              </div>
+              <div class="lobby-slide">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #4a5a4f, #3a4a3f); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width: 64px; height: 64px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+                </div>
+                <div class="lobby-slide-caption">
+                  <h4>Зона отдыха</h4>
+                  <p>Кресла и журнальные столики</p>
+                </div>
+              </div>
+              <div class="lobby-slide">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #2a3a2f, #1a2a1f); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width: 64px; height: 64px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+                </div>
+                <div class="lobby-slide-caption">
+                  <h4>Парадная</h4>
+                  <p>Авторский дизайн входных групп</p>
+                </div>
+              </div>
             </div>
-            <div>
-              <h4>Социальная инфраструктура</h4>
-              <p>Школы, детские сады, поликлиники и торговые центры в радиусе 5 минут</p>
+            <div class="lobby-controls">
+              <button class="lobby-btn" onclick="slideLobby(-1)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15,18 9,12 15,6"/></svg>
+              </button>
+              <button class="lobby-btn" onclick="slideLobby(1)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+              </button>
             </div>
           </div>
         </div>
@@ -301,117 +444,92 @@
     </div>
   </section>
 
-  <!-- Apartments Preview -->
-  <section class="section" id="apartments" style="background: var(--color-bg-alt);">
+  <!-- ========== GALLERY PREVIEW ========== -->
+  <section class="section" style="background: white;">
     <div class="container">
-      <div class="section-header fade-in">
-        <h2>Квартиры</h2>
-        <div class="section-divider"></div>
-        <p>Выберите идеальную планировку из 709 квартир бизнес-класса</p>
+      <div class="animate-on-scroll" style="text-align: center; margin-bottom: 64px;">
+        <div class="gold-divider" style="margin: 0 auto 24px;"></div>
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px;">Галерея</h2>
+        <p style="font-size: 1.125rem; color: var(--color-warm-gray); max-width: 600px; margin: 0 auto;">Визуализации будущего жилого комплекса</p>
       </div>
-      <div class="apartments-grid" id="home-apartments-grid">
-        <!-- Rendered by JS -->
+      <div class="horizontal-scroll">
+        <div class="horizontal-scroll-item" style="width: 500px; aspect-ratio: 16/10; border-radius: 16px; overflow: hidden; flex-shrink: 0;">
+          <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #2d5a3d, #1a3a2a); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3);">
+            <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width: 48px; height: 48px; margin-bottom: 12px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg><br><span style="font-size: 0.875rem;">Фасад комплекса</span></div>
+          </div>
+        </div>
+        <div class="horizontal-scroll-item" style="width: 500px; aspect-ratio: 16/10; border-radius: 16px; overflow: hidden; flex-shrink: 0;">
+          <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #3a5a4f, #2a4a3f); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3);">
+            <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width: 48px; height: 48px; margin-bottom: 12px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg><br><span style="font-size: 0.875rem;">Дворовая территория</span></div>
+          </div>
+        </div>
+        <div class="horizontal-scroll-item" style="width: 500px; aspect-ratio: 16/10; border-radius: 16px; overflow: hidden; flex-shrink: 0;">
+          <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #4a5a4f, #3a4a3f); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3);">
+            <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width: 48px; height: 48px; margin-bottom: 12px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg><br><span style="font-size: 0.875rem;">Панорамный вид</span></div>
+          </div>
+        </div>
+        <div class="horizontal-scroll-item" style="width: 500px; aspect-ratio: 16/10; border-radius: 16px; overflow: hidden; flex-shrink: 0;">
+          <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #2a4a3f, #1a3a2f); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3);">
+            <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width: 48px; height: 48px; margin-bottom: 12px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg><br><span style="font-size: 0.875rem;">Лобби</span></div>
+          </div>
+        </div>
       </div>
-      <div class="load-more-wrap fade-in">
-        <a href="apartments.html" class="btn btn-outline btn-lg">Смотреть все квартиры</a>
+      <div class="load-more-wrap animate-on-scroll" style="margin-top: 48px;">
+        <a href="gallery.html" class="btn-premium btn-premium-outline" style="color: var(--color-forest); border-color: var(--color-forest);">Смотреть галерею</a>
       </div>
     </div>
   </section>
 
-  <!-- Gallery Preview -->
-  <section class="section" id="gallery">
+  <!-- ========== PROGRESS ========== -->
+  <section class="section section-accent">
     <div class="container">
-      <div class="section-header fade-in">
-        <h2>Галерея</h2>
-        <div class="section-divider"></div>
-        <p>Визуализации будущего жилого комплекса</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item large fade-in">
-          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2d5a3d, #1a3a2a); color: white;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-            <span>Фасад комплекса</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in">
-          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #3a4a3f, #2a3a2f); color: white;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-            <span>Дворовая территория</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in">
-          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4a5a4f, #3a4a3f); color: white;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-            <span>Видовая терраса</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in">
-          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2a3a2f, #1a2a1f); color: white;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-            <span>Лобби</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in">
-          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #3a5a4f, #2a4a3f); color: white;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-            <span>Панорамный вид</span>
-          </div>
-        </div>
-      </div>
-      <div class="load-more-wrap fade-in" style="margin-top: var(--space-2xl);">
-        <a href="gallery.html" class="btn btn-outline btn-lg">Смотреть галерею</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Progress Section -->
-  <section class="section" id="progress" style="background: var(--color-bg-alt);">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>Ход проекта</h2>
-        <div class="section-divider"></div>
-        <p>Текущий статус реализации проекта</p>
-      </div>
-      <div class="container-narrow">
-        <div class="timeline fade-in">
-          <div class="timeline-item completed">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Q1 2026</div>
-            <div class="timeline-content">
-              <h4>Архитектурная концепция</h4>
-              <p>Разработка и утверждение архитектурной концепции жилого комплекса</p>
+      <div class="two-col">
+        <div class="animate-on-scroll">
+          <div class="gold-divider" style="margin-bottom: 24px;"></div>
+          <h2 style="color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px;">Ход проекта</h2>
+          <p style="color: rgba(255,255,255,0.6); margin-bottom: 48px;">Текущий статус реализации проекта</p>
+          <div class="timeline">
+            <div class="timeline-item completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date" style="color: rgba(255,255,255,0.4);">Q1 2026</div>
+              <div class="timeline-content">
+                <h4 style="color: white;">Архитектурная концепция</h4>
+                <p style="color: rgba(255,255,255,0.5);">Разработка и утверждение концепции</p>
+              </div>
+            </div>
+            <div class="timeline-item active">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date" style="color: var(--color-gold);">Q3 2026</div>
+              <div class="timeline-content">
+                <h4 style="color: white;">Предпродажная подготовка</h4>
+                <p style="color: rgba(255,255,255,0.5);">Запуск сайта, начало работы с клиентами</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date" style="color: rgba(255,255,255,0.4);">2027</div>
+              <div class="timeline-content">
+                <h4 style="color: white;">Начало строительства</h4>
+                <p style="color: rgba(255,255,255,0.5);">Старт строительных работ</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date" style="color: rgba(255,255,255,0.4);">2030</div>
+              <div class="timeline-content">
+                <h4 style="color: white;">Ввод в эксплуатацию</h4>
+                <p style="color: rgba(255,255,255,0.5);">Передача ключей собственникам</p>
+              </div>
             </div>
           </div>
-          <div class="timeline-item active">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Q3 2026 — настоящее время</div>
-            <div class="timeline-content">
-              <h4>Предпродажная подготовка</h4>
-              <p>Формирование квартирного состава, запуск сайта, начало работы с клиентами</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Q1 2027</div>
-            <div class="timeline-content">
-              <h4>Получение разрешения на строительство</h4>
-              <p>Прохождение экспертизы и получение всех необходимых согласований</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Q2 2027</div>
-            <div class="timeline-content">
-              <h4>Начало строительства</h4>
-              <p>Старт строительных работ первой очереди</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">2030</div>
-            <div class="timeline-content">
-              <h4>Ввод в эксплуатацию</h4>
-              <p>Завершение строительства и передача ключей собственникам</p>
+        </div>
+        <div class="animate-on-scroll delay-2">
+          <div class="progress-bar-container" style="margin-top: 0;">
+            <div style="font-size: 0.8125rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 24px;">Прогресс строительства</div>
+            <div style="font-family: var(--font-display); font-size: 4rem; font-weight: 700; color: var(--color-gold); line-height: 1; margin-bottom: 8px;">15%</div>
+            <div style="font-size: 0.9375rem; color: rgba(255,255,255,0.5); margin-bottom: 24px;">Концепция утверждена</div>
+            <div class="progress-bar-track" style="height: 6px;">
+              <div class="progress-bar-fill" style="width: 15%;"></div>
             </div>
           </div>
         </div>
@@ -419,82 +537,54 @@
     </div>
   </section>
 
-  <!-- Contact Form Section -->
-  <section class="contact-section section" id="contact-form">
+  <!-- ========== CONTACT / MANAGER ========== -->
+  <section class="section section-numbered" style="background: white;">
     <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info fade-in-left">
-          <h3>Свяжитесь с нами</h3>
-          <p>Оставьте заявку, и наш менеджер свяжется с вами в удобное время. Мы поможем подобрать идеальную квартиру и ответим на все вопросы.</p>
-          <div class="contact-details">
-            <div class="contact-detail">
-              <div class="contact-detail-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <div class="two-col">
+        <div class="animate-on-scroll">
+          <div class="numbered-block">
+            <h3 style="font-size: 1.75rem; margin-bottom: 24px;">Свяжитесь с нами</h3>
+            <p style="color: var(--color-warm-gray); margin-bottom: 32px;">Оставьте заявку, и наш менеджер свяжется с вами в удобное время. Мы поможем подобрать идеальную квартиру.</p>
+            <form class="form form-light" data-form="homepage_consult" style="max-width: 480px;">
+              <div class="form-group">
+                <input type="text" name="name" class="form-input" placeholder="Ваше имя" required>
               </div>
-              <div class="contact-detail-text">
-                <h5>Телефон</h5>
-                <a href="tel:+73421234567">+7 (342) 123-45-67</a>
+              <div class="form-group">
+                <input type="tel" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
               </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div class="form-checkbox">
+                <input type="checkbox" name="consent" id="home-consent" required>
+                <label for="home-consent">Я даю согласие на <a href="legal.html">обработку персональных данных</a></label>
               </div>
-              <div class="contact-detail-text">
-                <h5>Офис продаж</h5>
-                <p>г. Пермь, ул. Ленская, 1</p>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-              </div>
-              <div class="contact-detail-text">
-                <h5>Режим работы</h5>
-                <p>Пн–Сб: 10:00–20:00, Вс: 11:00–18:00</p>
-              </div>
-            </div>
-          </div>
-          <div class="contact-messengers">
-            <a href="https://t.me/lenskaya" target="_blank" class="messenger-btn telegram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-              Telegram
-            </a>
-            <a href="https://wa.me/73421234567" target="_blank" class="messenger-btn whatsapp">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
+              <button type="submit" class="btn-premium btn-premium-gold" style="width: 100%; justify-content: center;">Отправить заявку</button>
+            </form>
+            <div class="form-success"><h4 style="color: var(--color-forest);">Заявка отправлена!</h4><p style="color: var(--color-warm-gray);">Перезвоним в течение 15 минут.</p></div>
           </div>
         </div>
-        <div class="fade-in-right">
-          <form class="form" data-form="consultation">
-            <h3 style="color: white; margin-bottom: 8px;">Получить консультацию</h3>
-            <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin-bottom: 16px;">Заполните форму, и мы перезвоним в течение 15 минут</p>
-            <div class="form-group">
-              <label class="form-label" for="consult-name">Имя *</label>
-              <input type="text" id="consult-name" name="name" class="form-input" placeholder="Ваше имя" required>
+        <div class="animate-on-scroll delay-2">
+          <div class="manager-card">
+            <div class="manager-photo">
+              <div class="manager-photo-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="consult-phone">Телефон *</label>
-              <input type="tel" id="consult-phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+            <div class="manager-info">
+              <h3>Ваш персональный менеджер</h3>
+              <p class="manager-role">Отдел продаж ЖК Ленская</p>
+              <div class="manager-phone">
+                <a href="tel:+73421234567" style="color: var(--color-forest);">+7 (342) 123-45-67</a>
+              </div>
+              <div style="display: flex; gap: 12px;">
+                <a href="https://t.me/lenskaya" target="_blank" class="messenger-btn telegram" style="font-size: 0.8125rem; padding: 8px 16px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                  Telegram
+                </a>
+                <a href="https://wa.me/73421234567" target="_blank" class="messenger-btn whatsapp" style="font-size: 0.8125rem; padding: 8px 16px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                  WhatsApp
+                </a>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="consult-contact">Предпочтительный способ связи</label>
-              <select id="consult-contact" name="contact_method" class="form-input">
-                <option value="phone">Телефон</option>
-                <option value="telegram">Telegram</option>
-                <option value="whatsapp">WhatsApp</option>
-              </select>
-            </div>
-            <div class="form-checkbox">
-              <input type="checkbox" id="consult-consent" name="consent" required>
-              <label for="consult-consent">Я даю согласие на <a href="legal.html">обработку персональных данных</a> и подтверждаю, что ознакомлен с политикой конфиденциальности</label>
-            </div>
-            <button type="submit" class="btn btn-gold btn-lg" style="width: 100%;">Отправить заявку</button>
-          </form>
-          <div class="form-success">
-            <h4>Заявка отправлена!</h4>
-            <p>Наш менеджер свяжется с вами в течение 15 минут в рабочее время.</p>
           </div>
         </div>
       </div>
@@ -510,15 +600,15 @@
             <svg width="28" height="28" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="4" fill="currentColor" opacity="0.15"/><path d="M8 28V12L18 6L28 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 28V20H22V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 28H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             Ленская
           </div>
-          <p>Премиальный жилой комплекс бизнес-класса на первой линии правого берега Камы. Террасная архитектура, панорамные виды и приватные дворы.</p>
+          <p>Премиальный жилой комплекс бизнес-класса на первой линии правого берега Камы.</p>
         </div>
         <div>
           <h5>Навигация</h5>
           <div class="footer-links">
-            <a href="index.html#advantages">О проекте</a>
+            <a href="#about">О проекте</a>
             <a href="apartments.html">Квартиры</a>
             <a href="gallery.html">Галерея</a>
-            <a href="location.html">Расположение</a>
+            <a href="#location">Расположение</a>
             <a href="contacts.html">Контакты</a>
           </div>
         </div>
@@ -538,8 +628,6 @@
             <a href="tel:+73421234567">+7 (342) 123-45-67</a>
             <a href="mailto:info@lenskaya.ru">info@lenskaya.ru</a>
             <a href="contacts.html">г. Пермь, ул. Ленская, 1</a>
-            <a href="https://t.me/lenskaya" target="_blank">Telegram</a>
-            <a href="https://wa.me/73421234567" target="_blank">WhatsApp</a>
           </div>
         </div>
       </div>
@@ -553,14 +641,19 @@
     </div>
   </footer>
 
-  <!-- Consultation Modal -->
+  <!-- Floating Contact Button -->
+  <div class="floating-contact">
+    <button class="floating-contact-btn" data-modal="modal-consult" title="Получить консультацию">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </button>
+  </div>
+
+  <!-- Modals -->
   <div class="modal-overlay" id="modal-consult">
     <div class="modal">
       <div class="modal-header">
         <h3>Получить консультацию</h3>
-        <button class="modal-close" aria-label="Закрыть">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
+        <button class="modal-close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
       </div>
       <div class="modal-body">
         <form class="form" data-form="modal_consult">
@@ -573,27 +666,21 @@
             <input type="tel" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
           </div>
           <div class="form-checkbox">
-            <input type="checkbox" name="consent" id="modal-consent" required>
-            <label for="modal-consent">Я даю согласие на <a href="legal.html">обработку персональных данных</a></label>
+            <input type="checkbox" name="consent" id="mc-consent" required>
+            <label for="mc-consent">Я даю согласие на <a href="legal.html">обработку персональных данных</a></label>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Отправить</button>
+          <button type="submit" class="btn-premium btn-premium-primary" style="width: 100%; justify-content: center;">Отправить</button>
         </form>
-        <div class="form-success">
-          <h4>Заявка отправлена!</h4>
-          <p>Перезвоним в течение 15 минут.</p>
-        </div>
+        <div class="form-success"><h4>Заявка отправлена!</h4><p>Перезвоним в течение 15 минут.</p></div>
       </div>
     </div>
   </div>
 
-  <!-- Presentation Modal -->
   <div class="modal-overlay" id="modal-presentation">
     <div class="modal">
       <div class="modal-header">
         <h3>Получить презентацию</h3>
-        <button class="modal-close" aria-label="Закрыть">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
+        <button class="modal-close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
       </div>
       <div class="modal-body">
         <form class="form" data-form="presentation">
@@ -609,36 +696,63 @@
             <input type="checkbox" name="consent" id="pres-consent" required>
             <label for="pres-consent">Я даю согласие на <a href="legal.html">обработку персональных данных</a></label>
           </div>
-          <button type="submit" class="btn btn-gold btn-lg" style="width: 100%;">Скачать презентацию</button>
+          <button type="submit" class="btn-premium btn-premium-gold" style="width: 100%; justify-content: center;">Скачать презентацию</button>
         </form>
-        <div class="form-success">
-          <h4>Спасибо!</h4>
-          <p>Презентация отправлена на указанный адрес.</p>
-        </div>
+        <div class="form-success"><h4>Спасибо!</h4><p>Презентация отправлена.</p></div>
       </div>
     </div>
   </div>
 
   <script src="js/main.js"></script>
   <script>
-    // Render home page apartments preview
+    // Home page apartments
     document.addEventListener('DOMContentLoaded', () => {
       const grid = document.getElementById('home-apartments-grid');
       if (grid) {
         const preview = APARTMENTS_DATA.filter(a => a.status !== 'sold').slice(0, 6);
         grid.innerHTML = preview.map(apt => createApartmentCard(apt)).join('');
-        
         grid.querySelectorAll('.apartment-card-fav').forEach(btn => {
-          btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            toggleFavorite(parseInt(btn.dataset.id));
-          });
+          btn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); toggleFavorite(parseInt(btn.dataset.id)); });
         });
-        
         updateFavoritesUI();
-        initScrollAnimations();
       }
+
+      // Lobby slider
+      let lobbyIndex = 0;
+      const slider = document.getElementById('lobby-slider');
+      if (slider) {
+        const slides = slider.children.length;
+        window.slideLobby = (dir) => {
+          lobbyIndex = (lobbyIndex + dir + slides) % slides;
+          slider.style.transform = `translateX(-${lobbyIndex * 100}%)`;
+        };
+      }
+
+      // Hero search
+      window.applyHeroSearch = () => {
+        const rooms = document.getElementById('hero-rooms').value;
+        let url = 'apartments.html';
+        if (rooms) url += `?rooms=${rooms}`;
+        window.location.href = url;
+      };
+
+      // Animate on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+      // Progress bar animation
+      setTimeout(() => {
+        const fill = document.querySelector('.progress-bar-fill');
+        if (fill) fill.style.width = '15%';
+      }, 500);
     });
   </script>
 </body>
