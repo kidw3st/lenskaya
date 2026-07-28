@@ -5,20 +5,20 @@
 
 /* --- Premium Variables Override --- */
 :root {
-  --color-forest: #1B3A2D;
-  --color-forest-light: #2D5A3D;
-  --color-forest-dark: #0F2A1D;
-  --color-sand: #E8DFD0;
-  --color-sand-light: #F5F0E8;
-  --color-cream: #FDFBF7;
-  --color-charcoal: #1A1D1F;
+  --color-forest: #263D31;
+  --color-forest-light: #263D31;
+  --color-forest-dark: #0B100E;
+  --color-sand: #CFC4B1;
+  --color-sand-light: #F7F4ED;
+  --color-cream: #FBF9F3;
+  --color-charcoal: #1F211B;
   --color-slate: #3A3D40;
   --color-warm-gray: #8A8580;
-  --color-gold: #C4A265;
-  --color-gold-dark: #A88B52;
-  --color-gold-light: #D4B87A;
+  --color-gold: #AE8D69;
+  --color-gold-dark: #8B7355;
+  --color-gold-light: #C3A585;
 
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Inter', -apple-system, sans-serif;
 
   --section-padding: clamp(80px, 10vw, 140px);
