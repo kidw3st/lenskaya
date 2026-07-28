@@ -441,27 +441,112 @@ function renderFavoritesPage() {
 
 // --- Gallery ---
 function initGallery() {
-  const items = document.querySelectorAll('.gallery-item');
-  items.forEach(item => {
+  const items = document.querySelectorAll('[data-lightbox]');
+  if (!items.length) return;
+  
+  const galleryItems = Array.from(items);
+  
+  galleryItems.forEach((item, index) => {
     item.addEventListener('click', () => {
-      openLightbox(item.querySelector('img')?.src || '', item.dataset.caption || '');
+      openLightboxGallery(galleryItems, index);
     });
   });
 }
 
-function openLightbox(src, caption) {
-  if (!src) return;
+function openLightboxGallery(items, startIndex) {
+  let currentIndex = startIndex;
+  
   const overlay = document.createElement('div');
-  overlay.className = 'modal-overlay active';
-  overlay.style.cursor = 'zoom-out';
+  overlay.className = 'lightbox';
   overlay.innerHTML = `
-    <div style="max-width: 90vw; max-height: 90vh; position: relative;">
-      <img src="${src}" alt="${caption}" style="max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 8px;">
-      ${caption ? `<p style="text-align: center; color: white; margin-top: 16px; font-size: 0.9rem;">${caption}</p>` : ''}
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Закрыть">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Предыдущий">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15,18 9,12 15,6"/></svg>
+      </button>
+      <div class="lightbox-image-container">
+        <img class="lightbox-image" src="" alt="">
+        <div class="lightbox-caption"></div>
+      </div>
+      <button class="lightbox-nav lightbox-next" aria-label="Следующий">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+      </button>
+      <div class="lightbox-counter"></div>
     </div>
   `;
-  overlay.addEventListener('click', () => overlay.remove());
+  
   document.body.appendChild(overlay);
+  requestAnimationFrame(() => overlay.classList.add('active'));
+  
+  const img = overlay.querySelector('.lightbox-image');
+  const caption = overlay.querySelector('.lightbox-caption');
+  const counter = overlay.querySelector('.lightbox-counter');
+  const prevBtn = overlay.querySelector('.lightbox-prev');
+  const nextBtn = overlay.querySelector('.lightbox-next');
+  const closeBtn = overlay.querySelector('.lightbox-close');
+  
+  function showSlide(index) {
+    const item = items[index];
+    const src = item.dataset.lightboxSrc || item.querySelector('img')?.src || '';
+    const cap = item.dataset.lightboxCaption || item.dataset.caption || '';
+    const id = item.dataset.lightboxId || '';
+    
+    img.src = src;
+    img.alt = cap;
+    caption.innerHTML = cap + (id ? `<div class="lightbox-caption-id">${id}</div>` : '');
+    counter.textContent = `${index + 1} / ${items.length}`;
+  }
+  
+  function next() {
+    currentIndex = (currentIndex + 1) % items.length;
+    showSlide(currentIndex);
+  }
+  
+  function prev() {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    showSlide(currentIndex);
+  }
+  
+  function close() {
+    overlay.classList.remove('active');
+    setTimeout(() => overlay.remove(), 300);
+  }
+  
+  showSlide(currentIndex);
+  
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+  closeBtn.addEventListener('click', close);
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', function onKey(e) {
+    if (e.key === 'ArrowRight') next();
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'Escape') { close(); document.removeEventListener('keydown', onKey); }
+  });
+  
+  // Touch swipe
+  let touchStartX = 0;
+  overlay.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  overlay.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) next(); else prev();
+    }
+  }, { passive: true });
+  
+  // Click outside to close
+  overlay.querySelector('.lightbox-content').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) close();
+  });
+}
+
+function openLightbox(src, caption) {
+  // Legacy fallback
+  const items = [{ dataset: { lightbox: '', lightboxSrc: src, lightboxCaption: caption } }];
+  openLightboxGallery(items, 0);
 }
 
 // --- Forms ---

@@ -1,0 +1,274 @@
+/* ============================================
+   ЖК Ленская — Intro / Digital Opening
+   Cinematic intro per TZ §5
+   ============================================ */
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.intro-overlay.hidden {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* Phase backgrounds */
+.intro-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.intro-bg-inner {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0a1a10 0%, #1a2a1f 30%, #0d2818 60%, #1a1d1f 100%);
+}
+
+/* Texture overlay */
+.intro-texture {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.08;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px);
+}
+
+/* Water shimmer effect */
+.intro-shimmer {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background:
+    radial-gradient(ellipse at 30% 60%, rgba(196, 162, 101, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 40%, rgba(45, 90, 61, 0.08) 0%, transparent 50%);
+  animation: shimmer-move 6s ease-in-out infinite;
+}
+
+@keyframes shimmer-move {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Content */
+.intro-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 32px;
+}
+
+/* Phase 1: Developer logo */
+.intro-phase1 {
+  opacity: 0;
+  animation: intro-phase1-in 1.2s ease forwards;
+}
+
+@keyframes intro-phase1-in {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.intro-phase1.fade-out {
+  animation: intro-phase1-out 0.6s ease forwards;
+}
+
+@keyframes intro-phase1-out {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.95) translateY(-20px); }
+}
+
+.intro-logo-placeholder {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(196, 162, 101, 0.3);
+  border-radius: 50%;
+  background: rgba(196, 162, 101, 0.05);
+}
+
+.intro-logo-placeholder svg {
+  width: 48px;
+  height: 48px;
+  color: var(--color-gold);
+}
+
+.intro-location {
+  font-size: 0.8125rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 16px;
+}
+
+/* Phase 2: Project name */
+.intro-phase2 {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+}
+
+.intro-phase2.active {
+  animation: intro-phase2-in 1.4s ease forwards;
+}
+
+@keyframes intro-phase2-in {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.intro-phase2.fade-out {
+  animation: intro-phase2-out 0.8s ease forwards;
+}
+
+@keyframes intro-phase2-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.intro-project-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.intro-project-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.05em;
+}
+
+/* Phase 3: Opening reveal */
+.intro-reveal {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  pointer-events: none;
+}
+
+.intro-reveal-left,
+.intro-reveal-right {
+  flex: 1;
+  transition: transform 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.intro-reveal-left {
+  background: linear-gradient(135deg, rgba(15, 42, 29, 0.95) 0%, rgba(27, 58, 45, 0.9) 100%);
+  transform-origin: left center;
+}
+
+.intro-reveal-right {
+  background: linear-gradient(225deg, rgba(26, 29, 31, 0.95) 0%, rgba(15, 42, 29, 0.9) 100%);
+  transform-origin: right center;
+}
+
+.intro-reveal.open .intro-reveal-left {
+  transform: translateX(-100%);
+}
+
+.intro-reveal.open .intro-reveal-right {
+  transform: translateX(100%);
+}
+
+/* Skip button */
+.intro-skip {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 100;
+  padding: 10px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s;
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  animation: intro-skip-in 0.5s ease 0.5s forwards;
+}
+
+@keyframes intro-skip-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.intro-skip:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: white;
+}
+
+/* Progress bar at bottom */
+.intro-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 50;
+}
+
+.intro-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light));
+  width: 0%;
+  transition: width linear;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .intro-logo-placeholder {
+    width: 80px;
+    height: 80px;
+  }
+  .intro-logo-placeholder svg {
+    width: 32px;
+    height: 32px;
+  }
+  .intro-project-name {
+    font-size: 2.5rem;
+  }
+  .intro-skip {
+    top: 16px;
+    right: 16px;
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .intro-overlay {
+    display: none;
+  }
+}
