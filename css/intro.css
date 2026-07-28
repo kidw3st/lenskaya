@@ -19,7 +19,7 @@
 .intro-bg-inner {
   position: absolute;
   inset: 0;
-  background: #0B100E;
+  background: #050A08;
 }
 .intro-texture {
   position: absolute;
@@ -32,7 +32,7 @@
   position: absolute;
   inset: 0;
   z-index: 3;
-  background: radial-gradient(ellipse at 30% 60%, rgba(174,141,105,0.05) 0%, transparent 50%), radial-gradient(ellipse at 70% 40%, rgba(38,61,49,0.06) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 30% 60%, rgba(174,141,105,0.04) 0%, transparent 50%), radial-gradient(ellipse at 70% 40%, rgba(38,61,49,0.08) 0%, transparent 50%), radial-gradient(ellipse at 50% 50%, rgba(0,32,0,0.15) 0%, transparent 70%);
   animation: shimmerMove 6s ease-in-out infinite;
 }
 @keyframes shimmerMove { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
@@ -99,8 +99,8 @@
 
 .intro-reveal { position: absolute; inset: 0; z-index: 20; display: flex; pointer-events: none; }
 .intro-reveal-left, .intro-reveal-right { flex: 1; transition: transform 1.2s cubic-bezier(0.65, 0, 0.35, 1); }
-.intro-reveal-left { background: #0B100E; transform-origin: left center; }
-.intro-reveal-right { background: #0B100E; transform-origin: right center; }
+.intro-reveal-left { background: #050A08; transform-origin: left center; }
+.intro-reveal-right { background: #050A08; transform-origin: right center; }
 .intro-reveal.open .intro-reveal-left { transform: translateX(-100%); }
 .intro-reveal.open .intro-reveal-right { transform: translateX(100%); }
 
